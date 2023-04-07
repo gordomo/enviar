@@ -85,3 +85,7 @@ a.active{
     border-radius: 30px;
     padding: 15px 30px;
 }
+.punto-spam {
+    color: #3465E3;
+    font-family: initial;
+}

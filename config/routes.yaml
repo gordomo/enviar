@@ -1,3 +1,6 @@
-app_lucky_number:
+home:
     path: /
     controller: App\Controller\HomeController::home
+blog:
+    path: /blog
+    controller: App\Controller\BlogController::blog

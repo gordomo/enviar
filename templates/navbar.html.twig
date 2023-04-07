@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-white pt-5">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ path('home') }}">
                 <img src="{{ asset('assets/images/logos/logo.png') }}" alt="" width="75">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,19 +10,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end w-100 px-5 color-primario">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                        <a class="nav-link active" aria-current="page" href="{{ path('home') }}#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nosotros</a>
+                        <a class="nav-link" href="{{ path('home') }}#sobreNosotros">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="{{ path('home') }}#contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                        <a class="nav-link" href="{{ path('home') }}#faq">Preguntas Frecuentes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="{{ path('blog') }}">Blog</a>
                     </li>
                 </ul>
                 <form class="d-flex">
