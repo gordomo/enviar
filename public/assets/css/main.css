@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Sora';
+    src: url('../font/Sora-Regular.ttf') format('truetype');
+}
+
+
+body {
+    font-family: "Sora", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.color-primario, .color-primario a{
+    color: #3465E3 !important;
+}
+
+a.active{
+    font-weight: bold;
+}
+
+.color-primario a:hover {
+    font-weight: bold;
+}
+
+.primary-container {
+    position: relative;
+    display: block;
+    left: 5px;
+    width: 100%;
+    padding: 30px 0 0 0;
+    border: 2px solid #3465E3;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.primary-box {
+    display: block;
+    height: 100%;
+    width: 104%;
+    margin: -17px 0 -40px -37px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+}
+
+.boton-primario {
+    background: radial-gradient(122.9% 141.87% at 92.74% 0%, #3465E3 21.06%, #70C3FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #5497F2;
+    box-shadow: 3.56689px 3.56689px 44.5861px rgba(138, 239, 245, 0.1);
+    border-radius: 20px;
+    padding: 10px 35px;
+    color: white;
+}
+
+.boton-primario:hover {
+    background: radial-gradient(122.9% 141.87% at 92.74% 0%, #70C3FF 21.06%, #3465E3 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #5497F2;
+    color: white;
+}
+
+.tarjeta {
+    background: radial-gradient(122.9% 141.87% at 92.74% 0%, #3465E3 21.06%, #70C3FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(92.01% 86.82% at 92.74% 0%, #3465E3 21.06%, #70C3FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    border-radius: 30px;
+    color: white;
+}
+.tarjeta-2 {
+    border: 1px solid #3465E3;
+    border-bottom: 0;
+    border-radius: 30px;
+    box-shadow: 10px 10px 0 0 rgba(11,94,255,0.3);
+    -webkit-box-shadow: 10px 10px 0 0 rgba(11,94,255,0.3);
+    -moz-box-shadow: 10px 10px 0 0 rgba(11,94,255,0.3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.primary-container-small {
+    left: 30px !important;
+}
+
+.faq-box {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, #3465E3, white) border-box;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.form-item {
+    border: 1px solid #3465E3;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
