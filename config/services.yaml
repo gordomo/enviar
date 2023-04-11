@@ -5,6 +5,7 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
     blog_post_image_directory: '%kernel.project_dir%/public/uploads/blog_images'
+    app.adminpassword: '%env(ADMIN_PASS)%'
 
 services:
     # default configuration for services in *this* file
