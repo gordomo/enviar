@@ -23,78 +23,23 @@
         </div>
 
             <div class="row g-5 pb-5 mb-5">
+                {% for post in posts %}
                 <div class="col-md-12 col-xl-6 p-5 pb-0">
                     <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
+                        <a href="{{ path('app_blog_post_show', {'id': post.id}) }}">
+                            <img class="primary-box" src="{{ asset('uploads/blog_images/') }}{{ post.imgPath }}">
+                        </a>
                     </div>
                     <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
+                        <a class="text-decoration-none text-dark" href="{{ path('app_blog_post_show', {'id': post.id}) }}">
+                            <h3 class="fw-bolder">{{ post.title }}</h3>
+                        </a>
+                        <a class="text-decoration-none" href="{{ path('app_blog_post_show', {'id': post.id}) }}">
+                            <p class="fw-bold color-primario">{{ post.subtitulo }}</p>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xl-6 p-5 pb-0">
-                    <div class="primary-container mb-5">
-                        <img class="primary-box" src="{{ asset('assets/images/1.png') }}">
-                    </div>
-                    <div class="col-12">
-                        <h3 class="fw-bolder">Herramientas financieras para viajar</h3>
-                        <p class="fw-bold color-primario">En este articulo podras divisar las mejores herramientas para gestionar tu dinero mientras estes de viaje. </p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
 

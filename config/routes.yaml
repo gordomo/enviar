@@ -4,3 +4,33 @@ home:
 blog:
     path: /blog
     controller: App\Controller\BlogController::blog
+blog_search:
+    path: /blog/search
+    controller: App\Controller\BlogController::blogSearch
+app_blog_post_index:
+    path: /admin
+    controller: App\Controller\BlogPostController::index
+    methods: GET
+app_blog_post_new:
+    path: /admin/new
+    controller: App\Controller\BlogPostController::new
+    methods: GET|POST
+app_blog_post_show:
+    path: /blog/{id}
+    controller: App\Controller\BlogPostController::show
+    methods: GET
+app_blog_post_edit:
+    path: /admin/{id}/edit
+    controller: App\Controller\BlogPostController::edit
+    methods: GET|POST
+app_blog_post_delete:
+    path: /admin/{id}
+    controller: App\Controller\BlogPostController::delete
+    methods: POST
+app_login:
+    path: /login
+    controller: App\Controller\LoginController::index
+    methods: GET|POST
+app_logout:
+    path: /logout
+    methods: GET

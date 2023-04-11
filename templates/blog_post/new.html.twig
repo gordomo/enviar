@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New BlogPost{% endblock %}
+
+{% block body %}
+    <div class="container pt-5 mb-5">
+        <h1 class="mb-5">Create new BlogPost</h1>
+        {% if error is defined %}
+        <div class="row">
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-12 col-xl-6 col-xs-12">
+                {{ include('blog_post/_form.html.twig') }}
+                <a class="btn btn-warning float-end text-white"
+                   style="margin-top: -55px;"
+                   href="{{ path('app_blog_post_index') }}">Volver</a>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            let alert = document.querySelector('.alert');
+            if(alert) {
+                setTimeout(function () {
+                    alert.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+{% endblock %}

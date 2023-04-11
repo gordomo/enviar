@@ -24,11 +24,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('blog') }}">Blog</a>
                     </li>
+                    {% if is_granted('IS_AUTHENTICATED') %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_logout') }}">LogOut</a>
+                        </li>
+                    {% endif %}
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                {% if '/blog' in app.request.requestUri %}
+                <form class="d-flex" action="{{ path('blog_search') }}">
+                    <input class="form-control me-2" value="{{ term ?? '' }}" type="search" aria-label="Search" name="search">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
+                {% endif %}
             </div>
         </div>
     </nav>

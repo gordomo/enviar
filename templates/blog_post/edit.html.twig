@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit BlogPost{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row">
+            <h1>Edit BlogPost</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                {{ include('blog_post/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <label class="form-label">Imagen</label>
+                </div>
+                <div>
+                    {% if blog_img is defined %}
+                        <img class="img-fluid" src="{{ asset('uploads/blog_images/') }}{{ blog_img }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-secondary text-white" href="{{ path('app_blog_post_index') }}">Volver</a>
+            </div>
+            <div class="col-md-6">
+                {{ include('blog_post/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

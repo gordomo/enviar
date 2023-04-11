@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlogPost{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="mt-5">
+                    {{ blog_post.title }}
+                </h2>
+                <h4 class="mt-5">
+                    {{ blog_post.subtitulo }}
+                </h4>
+                <p class="my-5 pt-5">
+                    {{ blog_post.content | raw }}
+                </p>
+                <hr>
+                <small>
+                    Tags:&nbsp;
+                    {% set tags = blog_post.tags | split(' ') %}
+                    {% for tag in tags %}
+                        <a href="#">
+                            #{{ tag }}&nbsp;
+                        </a>
+                    {% endfor %}
+                </small>
+                <hr>
+                <small class="mt-5">
+                    <a href="#" onclick="window.history.go(-1); return false;">Volver</a>
+                </small>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="{{ asset('uploads/blog_images/') }}{{ blog_post.imgPath }}">
+            </div>
+        </div>
+    </div>
+{% endblock %}
