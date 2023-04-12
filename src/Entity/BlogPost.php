@@ -7,6 +7,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\Type;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 
@@ -102,5 +103,10 @@ class BlogPost
     {
         $metadata->addPropertyConstraint('content', new NotBlank());
         $metadata->addPropertyConstraint('title', new NotBlank());
+
+        $metadata->addPropertyConstraint('tags', new Regex([
+            'pattern' => '/^[\p{L}0-9 ]+$/',
+            'message' => 'La cadena solo debe contener letras, números y espacios en blanco.'
+        ]));
     }
 }

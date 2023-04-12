@@ -24,6 +24,7 @@ class BlogPostType extends AbstractType
             ])
             ->add('tags', TextType::class, [
                 'required' => false,
+                'label' => 'Tags - palabras separadas por un espacio en blanco'
             ])
             ->add('title', TextType::class,[
                 'required' => true,

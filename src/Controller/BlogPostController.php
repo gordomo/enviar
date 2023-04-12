@@ -61,6 +61,9 @@ class BlogPostController extends AbstractController
                 $blogPost->setImgPath($newFilename);
             }
 
+            /*$tags = $blogPost->getTags();
+            $blogPost->setTags(str_replace(',', ' ', $tags))*/;
+
             $blogPostRepository->save($blogPost, true);
 
             return $this->redirectToRoute('app_blog_post_index', [], Response::HTTP_SEE_OTHER);
